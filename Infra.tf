@@ -98,7 +98,7 @@ resource "aws_route_table" "IG_route_table" {
   }
 }
 
-#associate route table to public subnet
+#associate route table to the public subnet
 resource "aws_route_table_association" "associate_routetable_to_public_subnet_1" {
   subnet_id      = aws_subnet.public_subnet_1.id
   route_table_id = aws_route_table.IG_route_table.id
